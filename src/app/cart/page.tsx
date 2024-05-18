@@ -31,11 +31,11 @@ export default function Cart() {
 
   if (cart.length === 0) {
     return (
-      <div className=' max-w-7xl mx-auto  w-full flex justify-center items-center flex-col gap-6 min-h-[80vh]'>
-        <h1 className=' text-white text-2xl'>Your cart is Empty</h1>
+      <div className=' max-w-7xl mx-auto bg-white w-full flex justify-center items-center flex-col gap-6 min-h-[80vh]'>
+        <h1 className=' text-2xl'>Your cart is Empty</h1>
         <Button
           title='Back To Shopping'
-          className=' bg-blue-500 rounded-sm  border-gray-300 transition-all px-8 hover:bg-gray-200 hover:border-gray-800'
+          className=' bg-blue-500 rounded-sm  border-gray-300 hover:bg-gray-500 transition-all px-8 hover:text-white hover:border-gray-800'
           handleClick={() => {
             router.push('/products');
           }}

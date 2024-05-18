@@ -2,6 +2,7 @@ import { ProductProps } from '@/types';
 import axios from 'axios';
 
 const url = 'https://fakestoreapi.com/products';
+
 export async function fetchProductsByCategory(
   categoryName: string
 ): Promise<ProductProps[]> {
