@@ -35,7 +35,10 @@ export default function Product({ products }: { products: ProductProps[] }) {
   return (
     <div className=' grid grid-cols-2 sm:py-6 sm:grid-cols-4 gap-3'>
       {products?.map((product) => (
-        <Container className='  rounded-none justify-between overflow-hidden'>
+        <Container
+          key={product.id}
+          className='  rounded-none justify-between overflow-hidden'
+        >
           <Link href={`products/${product.id}`}>
             <ImageComponent
               imageUrl={product.image}

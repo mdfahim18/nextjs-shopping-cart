@@ -8,9 +8,7 @@ import { ProductProps } from '@/types';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 import Link from 'next/link';
-import Container from './Container';
 import ImageComponent from './ImageComponent';
-import { cn } from '@/utils/cn';
 
 const Hero = () => {
   const [products, setProducts] = useState<ProductProps[]>([]);
@@ -83,6 +81,7 @@ const Hero = () => {
       <div className=' absolute w-full max-h-[13rem] overflow-scroll scroll-bar z-50 bg-transparent top-[10rem]'>
         {filteredProducts.map((item) => (
           <Link
+            key={item.id}
             className=' bg-white rounded-t-sm px-4 py-2 ml-auto mr-auto w-[30rem] sm:w-[36rem] flex justify-between gap-3 cursor-pointer border-b-2'
             href={`/products/${item.id}`}
           >

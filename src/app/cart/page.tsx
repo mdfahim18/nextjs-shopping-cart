@@ -46,7 +46,10 @@ export default function Cart() {
   return (
     <Container className=' max-w-7xl mx-auto padding-y rounded-none gap-6'>
       {cart.map((item) => (
-        <div className=' flex justify-around items-center border-b-2 border-gray-600 py-2'>
+        <div
+          key={item.id}
+          className=' flex justify-around items-center border-b-2 border-gray-600 py-2'
+        >
           <div>
             <ImageComponent
               imageUrl={item.image}
